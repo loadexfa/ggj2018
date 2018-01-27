@@ -24,11 +24,15 @@ public class CellBehaviour : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
 			Debug.Log ("collided with virus");
-			if ((this.gameObject.tag == "red blood cell")||(hp <= 0)) {
+			if (this.gameObject.tag == "red blood cell") {
 				changeToVirus ();
 			} else if (this.gameObject.tag == "white blood cell") {
-				hp -= 1;
-				Destroy(coll.gameObject);
+				if (hp <= 0) {
+					changeToVirus ();
+				} else {
+					Destroy (coll.gameObject);
+					hp -= 1;
+				}
 			}
 		}
 	}
