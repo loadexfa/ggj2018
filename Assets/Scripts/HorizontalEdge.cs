@@ -13,22 +13,24 @@ public class HorizontalEdge : MonoBehaviour {
      **/
 
     public enum boundLocation { left, right };
-    public GameObject playerCharacter;
+    //public GameObject playerCharacter;
 
     public boundLocation screenLocation;
 
 	void Start () {
-        if (playerCharacter == null) {
+        
+        /*if (playerCharacter == null) {
             playerCharacter = GameObject.FindWithTag(("Player"));
-        }
+        }*/
+
 	}
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (screenLocation == boundLocation.left) {
-            playerCharacter.SendMessage("TeleportRight");
+            collision.gameObject.SendMessage("TeleportRight");
         }
         else {
-            playerCharacter.SendMessage("TeleportLeft");
+            collision.gameObject.SendMessage("TeleportLeft");
         }
     }
 }
