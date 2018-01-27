@@ -22,4 +22,8 @@ public class CellMovement : MonoBehaviour {
         Vector3 displacement = endPosition - startPosition;
         rigidBody.AddForce(new Vector2(displacement.x, displacement.y));
     }
+
+    public void TeleportLeft() {
+        
+    }
 }
