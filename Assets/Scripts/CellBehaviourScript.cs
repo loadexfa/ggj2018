@@ -3,25 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CellBehaviourScript : MonoBehaviour {
-	public GameObject virus;
-	private Vector3 pos;
-	// Use this for initialization
-	void Start () {
-		Debug.Log ("start");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public Sprite redBloodCellSprite;
+	public Sprite whiteBloodCellSprite;
+	public Sprite virusSprite;
+	public bool isVirus;
+	private SpriteRenderer m_SpriteRenderer;
+	private Vector3 startPosition;
+	private Vector3 endPosition;
+	private Vector3 displacement;
+	private Rigidbody2D m_rigidBody;
+
+	void Start()
+	{
+		m_rigidBody = this.GetComponent<Rigidbody2D> ();
+		if (isVirus) {
+			changeToVirus ();
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
 			Debug.Log ("collided with virus");
-			pos = transform.position;
-			Destroy(gameObject);
-			Instantiate (virus);
-			virus.transform.position = pos;
+			changeToVirus ();
+		}
+	}
+
+	void changeToVirus() {
+		//Get the SpriteRenderer on this GameObject
+		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
+		m_SpriteRenderer.sprite = virusSprite;
+		isVirus = true;
+		this.tag = "virus";
+	}
+
+	void OnMouseDown() {
+		if (isVirus) {
+			startPosition = Input.mousePosition;
+		}
+	}
+
+	private void OnMouseUp() {
+		if (isVirus) {
+			endPosition = Input.mousePosition;
+			displacement = endPosition - startPosition;
+			m_rigidBody.AddForce(new Vector2(displacement.x, displacement.y));
 		}
 	}
 }
