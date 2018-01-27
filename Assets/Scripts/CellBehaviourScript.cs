@@ -34,19 +34,6 @@ public class CellBehaviourScript : MonoBehaviour {
 		m_SpriteRenderer.sprite = virusSprite;
 		isVirus = true;
 		this.tag = "virus";
-	}
-
-	void OnMouseDown() {
-		if (isVirus) {
-			startPosition = Input.mousePosition;
-		}
-	}
-
-	private void OnMouseUp() {
-		if (isVirus) {
-			endPosition = Input.mousePosition;
-			displacement = endPosition - startPosition;
-			m_rigidBody.AddForce(new Vector2(displacement.x, displacement.y));
-		}
+		this.GetComponent<CellMovement>().enabled = true;
 	}
 }
