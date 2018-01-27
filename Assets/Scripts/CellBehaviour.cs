@@ -43,5 +43,7 @@ public class CellBehaviour : MonoBehaviour {
 		m_SpriteRenderer.sprite = virusSprite;
 		this.tag = "virus";
 		this.GetComponent<CellMovement>().enabled = true;
+		// Scale up virus from red blood cell
+		transform.localScale += new Vector3(0.06F, 0.06F, 0);
 	}
 }
