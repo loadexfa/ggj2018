@@ -8,6 +8,9 @@ public class CellMovement : MonoBehaviour {
     private Vector3 endPosition;
     private Rigidbody2D rigidBody;
 
+    public Transform teleportLeftDestination;
+    public Transform teleportRightDestination;
+
 	// Use this for initialization
 	void Start () {
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
@@ -24,6 +27,10 @@ public class CellMovement : MonoBehaviour {
     }
 
     public void TeleportLeft() {
-        
+        rigidBody.transform.position = teleportLeftDestination.position;
+    }
+
+    public void TeleportRight() {
+        rigidBody.transform.position = teleportRightDestination.position;
     }
 }

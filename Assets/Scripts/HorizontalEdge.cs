@@ -23,13 +23,7 @@ public class HorizontalEdge : MonoBehaviour {
         }
 	}
 
-    /*private void OnCollisionEnter2D(Collision2D collision) {
-        Debug.Log("Hey there...");
-    }*/
-
     private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Hey there...");
-
         if (screenLocation == boundLocation.left) {
             playerCharacter.SendMessage("TeleportRight");
         }
