@@ -9,48 +9,48 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1518886996445210}
+  m_RootGameObject: {fileID: 1762404887841288}
   m_IsPrefabParent: 1
---- !u!1 &1518886996445210
+--- !u!1 &1762404887841288
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4717675620219766}
-  - component: {fileID: 212375360727124394}
-  - component: {fileID: 50661829698186406}
-  - component: {fileID: 58651907800166428}
-  - component: {fileID: 114627463460675820}
-  - component: {fileID: 114765374807906396}
+  - component: {fileID: 4456465607764628}
+  - component: {fileID: 212460927987120004}
+  - component: {fileID: 50321009331197436}
+  - component: {fileID: 58670409968430606}
+  - component: {fileID: 114675942357661742}
+  - component: {fileID: 114524941398191238}
   m_Layer: 0
-  m_Name: red blood cell
-  m_TagString: red blood cell
+  m_Name: white blood cell
+  m_TagString: white blood cell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4717675620219766
+--- !u!4 &4456465607764628
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
+  m_GameObject: {fileID: 1762404887841288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.4397736, y: 3.3722801, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50661829698186406
+--- !u!50 &50321009331197436
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
+  m_GameObject: {fileID: 1762404887841288}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58651907800166428
+--- !u!58 &58670409968430606
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
+  m_GameObject: {fileID: 1762404887841288}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -79,12 +79,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.9999995
---- !u!114 &114627463460675820
+--- !u!114 &114524941398191238
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
+  m_GameObject: {fileID: 1762404887841288}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fe1365b70574e718c516f53556fd0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportLeftDestination: {fileID: 0}
+  teleportRightDestination: {fileID: 0}
+--- !u!114 &114675942357661742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762404887841288}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fa52dab2201341d088265016f909fc5, type: 3}
@@ -94,25 +107,12 @@ MonoBehaviour:
   whiteBloodCellSprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
     type: 3}
   virusSprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
---- !u!114 &114765374807906396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4fe1365b70574e718c516f53556fd0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportLeftDestination: {fileID: 0}
-  teleportRightDestination: {fileID: 0}
---- !u!212 &212375360727124394
+--- !u!212 &212460927987120004
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1518886996445210}
+  m_GameObject: {fileID: 1762404887841288}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -141,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: befca8bd6b81a47fc9f034b4786e3b7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

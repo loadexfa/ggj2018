@@ -11,17 +11,24 @@ public class CellBehaviour : MonoBehaviour {
 	private Vector3 endPosition;
 	private Vector3 displacement;
 	private Rigidbody2D m_rigidBody;
+	private int hp = 1;
 
 	void Start()
 	{
 		m_rigidBody = this.GetComponent<Rigidbody2D> ();
+		if (this.gameObject.tag == "white blood cell") {
+			hp = 5;
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
 			Debug.Log ("collided with virus");
-			if (this.gameObject.tag == "red blood cell") {
+			if ((this.gameObject.tag == "red blood cell")||(hp <= 0)) {
 				changeToVirus ();
+			} else if (this.gameObject.tag == "white blood cell") {
+				hp -= 1;
+				Destroy(coll.gameObject);
 			}
 		}
 	}
