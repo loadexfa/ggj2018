@@ -17,13 +17,17 @@ public class CellMovement : MonoBehaviour {
 	}
 	
     void OnMouseDown() {
-        startPosition = Input.mousePosition;
+        if (gameObject.tag == "virus") {
+            startPosition = Input.mousePosition;
+        }
     }
 
     private void OnMouseUp() {
-        endPosition = Input.mousePosition;
-        Vector3 displacement = endPosition - startPosition;
-        rigidBody.AddForce(new Vector2(displacement.x, displacement.y));
+        if (gameObject.tag == "virus") {
+            endPosition = Input.mousePosition;
+            Vector3 displacement = endPosition - startPosition;
+            rigidBody.AddForce(new Vector2(displacement.x, displacement.y));
+        }
     }
 
     public void TeleportLeft() {
