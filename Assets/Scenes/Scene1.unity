@@ -413,6 +413,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 212900556540545136, guid: 2bbdb11330ac84259a6794b8662cb93d,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2bbdb11330ac84259a6794b8662cb93d, type: 2}
   m_IsPrefabParent: 0
@@ -459,6 +465,34 @@ Prefab:
       propertyPath: m_Name
       value: red blood cell (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1518886996445210, guid: 9e093b19cc4e54810b5060ad3a8d3623, type: 2}
+      propertyPath: m_TagString
+      value: white blood cell
+      objectReference: {fileID: 0}
+    - target: {fileID: 212375360727124394, guid: 9e093b19cc4e54810b5060ad3a8d3623,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
+        type: 3}
+    - target: {fileID: 114627463460675820, guid: 9e093b19cc4e54810b5060ad3a8d3623,
+        type: 2}
+      propertyPath: whiteBloodCellSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
+        type: 3}
+    - target: {fileID: 114627463460675820, guid: 9e093b19cc4e54810b5060ad3a8d3623,
+        type: 2}
+      propertyPath: redBloodCellSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: befca8bd6b81a47fc9f034b4786e3b7a,
+        type: 3}
+    - target: {fileID: 114627463460675820, guid: 9e093b19cc4e54810b5060ad3a8d3623,
+        type: 2}
+      propertyPath: virusSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e093b19cc4e54810b5060ad3a8d3623, type: 2}
   m_IsPrefabParent: 0

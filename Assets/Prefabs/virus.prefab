@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114082832201659704}
   m_Layer: 0
   m_Name: virus
-  m_TagString: red blood cell
+  m_TagString: virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fe1365b70574e718c516f53556fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportLeftDestination: {fileID: 0}
+  teleportRightDestination: {fileID: 0}
 --- !u!114 &114083443318813306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +107,6 @@ MonoBehaviour:
   whiteBloodCellSprite: {fileID: 21300000, guid: 8da3df02f01f048108360bd5b96dde0c,
     type: 3}
   virusSprite: {fileID: 21300000, guid: d1575cbc1fb0b4fcea0401f34d897da1, type: 3}
-  isVirus: 1
 --- !u!212 &212900556540545136
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1575cbc1fb0b4fcea0401f34d897da1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
