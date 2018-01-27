@@ -41,9 +41,14 @@ public class CellBehaviour : MonoBehaviour {
 		//Get the SpriteRenderer on this GameObject
 		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
 		m_SpriteRenderer.sprite = virusSprite;
+		if (this.tag == "white blood cell") {
+			// Scale down virus from white blood cell
+			transform.localScale += new Vector3 (-0.05F, -0.05F, 0);
+		} else if (this.tag == "red blood cell") {
+			// Scale up virus from red blood cell
+			transform.localScale += new Vector3 (0.06F, 0.06F, 0);
+		}
 		this.tag = "virus";
 		this.GetComponent<CellMovement>().enabled = true;
-		// Scale up virus from red blood cell
-		transform.localScale += new Vector3(0.06F, 0.06F, 0);
 	}
 }
