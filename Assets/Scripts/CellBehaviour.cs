@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CellBehaviourScript : MonoBehaviour {
+public class CellBehaviour : MonoBehaviour {
 	public Sprite redBloodCellSprite;
 	public Sprite whiteBloodCellSprite;
 	public Sprite virusSprite;
