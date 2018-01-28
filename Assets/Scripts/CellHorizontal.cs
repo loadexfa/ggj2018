@@ -13,6 +13,11 @@ public class CellHorizontal : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_rigidBody = this.GetComponent<Rigidbody2D>();
+
+		// add some randomized force that prefers right direction
+		Vector3 randomDirection = Random.insideUnitSphere * 40 + Vector3.right * 40;
+		randomDirection.z = 0;
+		m_rigidBody.AddForce (randomDirection);
         InvokeRepeating("ChangeDirection", 0, 1f);
 
     }
