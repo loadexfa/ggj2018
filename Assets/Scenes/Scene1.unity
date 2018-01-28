@@ -662,6 +662,11 @@ Prefab:
       propertyPath: teleportRightDestination
       value: 
       objectReference: {fileID: 1543081801}
+    - target: {fileID: 114675942357661742, guid: 6812851bdcf5d49bc9058e474222ce38,
+        type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6812851bdcf5d49bc9058e474222ce38, type: 2}
   m_IsPrefabParent: 0

@@ -3,27 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CellBehaviour : MonoBehaviour {
+
 	public Sprite redBloodCellSprite;
 	public Sprite whiteBloodCellSprite;
 	public Sprite virusSprite;
+	public float speed;
+
 	private SpriteRenderer m_SpriteRenderer;
 	private Vector3 startPosition;
 	private Vector3 endPosition;
 	private Vector3 displacement;
-	//private Rigidbody2D m_rigidBody;
+	private Rigidbody2D m_rigidBody;
 	private int hp = 1;
+	private bool virusNear;
 
 	void Start()
 	{
-		//m_rigidBody = this.GetComponent<Rigidbody2D> ();
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 4;
 		}
+		m_rigidBody = this.GetComponent<Rigidbody2D>();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
-			//Debug.Log ("collided with virus");
+			Debug.Log ("collided with virus");
 			if (this.gameObject.tag == "red blood cell") {
 				changeToVirus ();
 			} else if (this.gameObject.tag == "white blood cell") {
@@ -34,6 +38,17 @@ public class CellBehaviour : MonoBehaviour {
 					hp -= 1;
 				}
 			}
+		}
+	}
+		
+	void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log ("White blood cell has detected virus");
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.gameObject.tag == "virus") {
+			float step = speed * Time.deltaTime;
+			transform.position = Vector3.MoveTowards (transform.position, other.transform.position, step);
 		}
 	}
 
