@@ -23,13 +23,14 @@ public class CellBehaviour : MonoBehaviour {
 
 	void Start()
 	{
-		//Get the SpriteRenderer on this GameObject
 		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
+		m_rigidBody = this.GetComponent<Rigidbody2D>();
 
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 4;
+		} else if (this.gameObject.tag == "virus") {
+			ChangeToVirus ();
 		}
-		m_rigidBody = this.GetComponent<Rigidbody2D>();
 
         scoreKeeper = GameObject.Find("Score");
 	}
@@ -38,10 +39,10 @@ public class CellBehaviour : MonoBehaviour {
 		if (coll.gameObject.tag == "virus") {
 			//Debug.Log ("collided with virus");
 			if (this.gameObject.tag == "red blood cell") {
-				changeToVirus ();
+				ChangeToVirus ();
 			} else if (this.gameObject.tag == "white blood cell") {
 				if (hp <= 0) {
-					changeToVirus ();
+					ChangeToVirus ();
 				} else {
 					Destroy (coll.gameObject);
 					hp -= 1;
@@ -71,7 +72,7 @@ public class CellBehaviour : MonoBehaviour {
 	}
 		
 
-    void changeToVirus() {
+    void ChangeToVirus() {
 		m_SpriteRenderer.sprite = virusSprite;
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
@@ -84,5 +85,23 @@ public class CellBehaviour : MonoBehaviour {
 		}
 		this.tag = "virus";
 		this.GetComponent<CellMovement>().enabled = true;
+
+		float blinkStartTime = Random.Range(0, 1f);
+		float blinkRepeatTime = Random.Range(1, 1.5f);
+		InvokeRepeating("VirusBlink", blinkStartTime, blinkRepeatTime);
+	}
+
+	void VirusBlink() {
+		float blinkTime = Random.Range(0.1f, 0.5f);
+		CloseVirusEye();
+		Invoke("OpenVirusEye", blinkTime);
+	}
+
+	void OpenVirusEye(){
+		m_SpriteRenderer.sprite = virusSprite;
+	}
+
+	void CloseVirusEye(){
+		m_SpriteRenderer.sprite = virusEyeClosedSprite;
 	}
 }
