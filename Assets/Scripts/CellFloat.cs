@@ -12,8 +12,10 @@ public class CellFloat : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        float startTime = Random.Range(0, 1f);
+        float repeatTime = Random.Range(1, 1.5f);
         m_rigidBody = this.GetComponent<Rigidbody2D>();
-        InvokeRepeating("ChangeDirection", 0, 1f);
+        InvokeRepeating("ChangeDirection", startTime, repeatTime);
         
     }	
     void ChangeDirection()
