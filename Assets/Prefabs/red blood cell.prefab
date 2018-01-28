@@ -60,7 +60,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0
+  m_GravityScale: 0.004
   m_Material: {fileID: 6200000, guid: 6a6d9ec79a5e036438d4e19ad5110a44, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -96,6 +96,7 @@ MonoBehaviour:
   whiteBloodCellSprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
     type: 3}
   virusSprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
+  speed: 0
 --- !u!114 &114678161292782222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4553c981d6a914e469c2aa3dad6a9abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentDirection: 0
+  currentDirection: 1
 --- !u!114 &114747262928599588
 MonoBehaviour:
   m_ObjectHideFlags: 1
