@@ -136,8 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fe1365b70574e718c516f53556fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLeftDestination: {fileID: 0}
-  teleportRightDestination: {fileID: 0}
+  teleportLeftDestination: {fileID: 4704662720773280, guid: dfc5ed3968553456888d3eac292ec995,
+    type: 2}
+  teleportRightDestination: {fileID: 4268633128213758, guid: f9756add4c0ac440e84d1ffaff8f57ea,
+    type: 2}
 --- !u!114 &114636414530435036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +165,12 @@ MonoBehaviour:
   redBloodCellSprite: {fileID: 21300000, guid: befca8bd6b81a47fc9f034b4786e3b7a, type: 3}
   whiteBloodCellSprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
     type: 3}
+  whiteBloodCellMouthOpenSprite: {fileID: 21300000, guid: 25b9681a0ef4f42c489106b61d7a304d,
+    type: 3}
   virusSprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
+  virusEyeClosedSprite: {fileID: 21300000, guid: 1dd6806155a53403db0ec6fbc2251ff6,
+    type: 3}
+  speed: 0
 --- !u!212 &212460927987120004
 SpriteRenderer:
   m_ObjectHideFlags: 1

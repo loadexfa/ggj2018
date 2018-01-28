@@ -6,7 +6,9 @@ public class CellBehaviour : MonoBehaviour {
 
 	public Sprite redBloodCellSprite;
 	public Sprite whiteBloodCellSprite;
+	public Sprite whiteBloodCellMouthOpenSprite;
 	public Sprite virusSprite;
+	public Sprite virusEyeClosedSprite;
 	public float speed;
 
 	private SpriteRenderer m_SpriteRenderer;
@@ -21,6 +23,9 @@ public class CellBehaviour : MonoBehaviour {
 
 	void Start()
 	{
+		//Get the SpriteRenderer on this GameObject
+		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
+
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 4;
 		}
@@ -46,7 +51,10 @@ public class CellBehaviour : MonoBehaviour {
 	}
 		
 	void OnTriggerEnter2D(Collider2D other) {
-		//Debug.Log ("White blood cell has detected virus");
+		if (other.gameObject.tag == "virus") {
+			Debug.Log ("White blood cell has detected virus");
+			m_SpriteRenderer.sprite = whiteBloodCellMouthOpenSprite;
+		}
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
@@ -56,9 +64,14 @@ public class CellBehaviour : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.gameObject.tag == "virus") {
+			m_SpriteRenderer.sprite = whiteBloodCellSprite;
+		}
+	}
+		
+
     void changeToVirus() {
-		//Get the SpriteRenderer on this GameObject
-		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
 		m_SpriteRenderer.sprite = virusSprite;
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
