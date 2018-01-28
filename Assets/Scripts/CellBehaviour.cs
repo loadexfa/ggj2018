@@ -17,12 +17,16 @@ public class CellBehaviour : MonoBehaviour {
 	private int hp = 1;
 	private bool virusNear;
 
+    private GameObject scoreKeeper;
+
 	void Start()
 	{
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 4;
 		}
 		m_rigidBody = this.GetComponent<Rigidbody2D>();
+
+        scoreKeeper = GameObject.Find("Score");
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
@@ -59,9 +63,11 @@ public class CellBehaviour : MonoBehaviour {
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
 			transform.localScale += new Vector3 (-0.05F, -0.05F, 0);
+            scoreKeeper.SendMessage("IncrementScoreBig"); // tired... this feels like a cheap solution....
 		} else if (this.tag == "red blood cell") {
 			// Scale up virus from red blood cell
 			transform.localScale += new Vector3 (0.06F, 0.06F, 0);
+            scoreKeeper.SendMessage("IncrementScore");
 		}
 		this.tag = "virus";
 		this.GetComponent<CellMovement>().enabled = true;
