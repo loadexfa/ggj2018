@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour {
 
@@ -42,15 +43,22 @@ public class Spawner : MonoBehaviour {
 
         if (red == null && white == null) {
             Debug.Log("you win!");
+			endGame ();
             return true;
         }
 
         if (virus == null) {
-            Debug.Log("You lose!");
+			Debug.Log("You lose!");
+			endGame ();
             return true;
         }
 
         return false;
 
     }
+
+	void endGame(){
+		finalScoreScript.updateScore (Score.getScore ());
+		SceneManager.LoadScene (2);
+	}
 }

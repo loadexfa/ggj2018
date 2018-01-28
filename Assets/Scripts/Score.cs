@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
-    private int score;
+    private static int score;
     private Text scoreText;
 
     public int scoreIncrement = 10;
@@ -25,4 +25,8 @@ public class Score : MonoBehaviour {
         score += scoreIncrementBig;
         scoreText.text = score.ToString();
     }
+
+	public static int getScore(){
+		return score;
+	}
 }
