@@ -31,7 +31,7 @@ public class CellBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
-			Debug.Log ("collided with virus");
+			//Debug.Log ("collided with virus");
 			if (this.gameObject.tag == "red blood cell") {
 				changeToVirus ();
 			} else if (this.gameObject.tag == "white blood cell") {
@@ -46,7 +46,7 @@ public class CellBehaviour : MonoBehaviour {
 	}
 		
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("White blood cell has detected virus");
+		//Debug.Log ("White blood cell has detected virus");
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
