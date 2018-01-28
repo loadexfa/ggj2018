@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58670409968430606}
   - component: {fileID: 114675942357661742}
   - component: {fileID: 114524941398191238}
+  - component: {fileID: 58448231313433666}
   m_Layer: 0
   m_Name: white blood cell
   m_TagString: white blood cell
@@ -64,6 +65,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58448231313433666
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762404887841288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 10
 --- !u!58 &58670409968430606
 CircleCollider2D:
   m_ObjectHideFlags: 1

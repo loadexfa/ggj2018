@@ -36,6 +36,11 @@ public class CellBehaviour : MonoBehaviour {
 			}
 		}
 	}
+		
+	void OnTriggerEnter(Collider other) {
+		Debug.Log ("White blood cell has detected virus");
+//		Destroy(other.gameObject);
+	}
 
 	void changeToVirus() {
 		//Get the SpriteRenderer on this GameObject
