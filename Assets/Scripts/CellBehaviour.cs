@@ -10,12 +10,12 @@ public class CellBehaviour : MonoBehaviour {
 	private Vector3 startPosition;
 	private Vector3 endPosition;
 	private Vector3 displacement;
-	private Rigidbody2D m_rigidBody;
+	//private Rigidbody2D m_rigidBody;
 	private int hp = 1;
 
 	void Start()
 	{
-		m_rigidBody = this.GetComponent<Rigidbody2D> ();
+		//m_rigidBody = this.GetComponent<Rigidbody2D> ();
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 5;
 		}
@@ -23,7 +23,7 @@ public class CellBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "virus") {
-			Debug.Log ("collided with virus");
+			//Debug.Log ("collided with virus");
 			if (this.gameObject.tag == "red blood cell") {
 				changeToVirus ();
 			} else if (this.gameObject.tag == "white blood cell") {
@@ -36,13 +36,8 @@ public class CellBehaviour : MonoBehaviour {
 			}
 		}
 	}
-		
-	void OnTriggerEnter(Collider other) {
-		Debug.Log ("White blood cell has detected virus");
-//		Destroy(other.gameObject);
-	}
 
-	void changeToVirus() {
+    void changeToVirus() {
 		//Get the SpriteRenderer on this GameObject
 		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
 		m_SpriteRenderer.sprite = virusSprite;
