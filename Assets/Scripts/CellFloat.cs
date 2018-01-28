@@ -30,7 +30,7 @@ public class CellFloat : MonoBehaviour {
 
         if (currentDirection == direction.up)
         { 
-            m_rigidBody.AddForce(Vector3.up * .5f);
+            m_rigidBody.AddForce(Vector3.up * .497f);
         }
         else
         {

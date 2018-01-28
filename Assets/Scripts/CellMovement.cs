@@ -37,10 +37,12 @@ public class CellMovement : MonoBehaviour {
     }
 
     public void TeleportLeft() {
-        rigidBody.transform.position = teleportLeftDestination.position;
+        Vector3 newPosition = new Vector3(teleportLeftDestination.position.x, rigidBody.transform.position.y, 0);
+        rigidBody.transform.position = newPosition;
     }
 
     public void TeleportRight() {
-        rigidBody.transform.position = teleportRightDestination.position;
+        Vector3 newPositionRight = new Vector3(teleportRightDestination.position.x, rigidBody.transform.position.y, 0);
+        rigidBody.transform.position = newPositionRight;
     }
 }

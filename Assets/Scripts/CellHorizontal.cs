@@ -20,7 +20,7 @@ public class CellHorizontal : MonoBehaviour {
     {
         if (currentDirection == direction.right)
         {
-            m_rigidBody.AddForce(Vector3.right * .1f);
+            m_rigidBody.AddForce(Vector3.right * .05f);
         }
 		
 	}

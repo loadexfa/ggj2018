@@ -17,7 +17,7 @@ public class CellBehaviour : MonoBehaviour {
 	{
 		m_rigidBody = this.GetComponent<Rigidbody2D> ();
 		if (this.gameObject.tag == "white blood cell") {
-			hp = 5;
+			hp = 4;
 		}
 	}
 
