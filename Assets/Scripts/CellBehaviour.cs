@@ -52,28 +52,27 @@ public class CellBehaviour : MonoBehaviour {
 	}
 		
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "virus") {
+		if (this.gameObject.tag == "white blood cell" && other.gameObject.tag == "virus") {
 			Debug.Log ("White blood cell has detected virus");
 			m_SpriteRenderer.sprite = whiteBloodCellMouthOpenSprite;
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		if (other.gameObject.tag == "virus") {
+		if (this.gameObject.tag == "white blood cell" && other.gameObject.tag == "virus") {
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (transform.position, other.transform.position, step);
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.tag == "virus") {
+		if (this.gameObject.tag == "white blood cell" && other.gameObject.tag == "virus") {
 			m_SpriteRenderer.sprite = whiteBloodCellSprite;
 		}
 	}
 		
 
     void ChangeToVirus() {
-		m_SpriteRenderer.sprite = virusSprite;
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
 			transform.localScale += new Vector3 (-0.05F, -0.05F, 0);
@@ -84,6 +83,7 @@ public class CellBehaviour : MonoBehaviour {
             scoreKeeper.SendMessage("IncrementScore");
 		}
 		this.tag = "virus";
+		m_SpriteRenderer.sprite = virusSprite;
 		this.GetComponent<CellMovement>().enabled = true;
 
 		float blinkStartTime = Random.Range(0, 1f);
