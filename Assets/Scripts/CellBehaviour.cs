@@ -10,7 +10,9 @@ public class CellBehaviour : MonoBehaviour {
 	public Sprite virusSprite;
 	public Sprite virusEyeClosedSprite;
 	public float speed;
+	public AudioClip squashSound;
 
+	private AudioSource source;
 	private SpriteRenderer m_SpriteRenderer;
 	private Vector3 startPosition;
 	private Vector3 endPosition;
@@ -22,6 +24,7 @@ public class CellBehaviour : MonoBehaviour {
 	void Start()
 	{
 		m_SpriteRenderer = this.GetComponent<SpriteRenderer>();
+		source = GetComponent<AudioSource>();
 
 		if (this.gameObject.tag == "white blood cell") {
 			hp = 4;
@@ -69,7 +72,8 @@ public class CellBehaviour : MonoBehaviour {
 	}
 		
 
-    void ChangeToVirus() {
+	void ChangeToVirus() {
+		source.PlayOneShot(squashSound, 0.5f);
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
 			transform.localScale += new Vector3 (-0.01F, -0.01F, 0);
