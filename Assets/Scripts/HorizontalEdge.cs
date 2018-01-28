@@ -17,11 +17,13 @@ public class HorizontalEdge : MonoBehaviour {
     public boundLocation screenLocation;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (screenLocation == boundLocation.left) {
-            collision.gameObject.SendMessage("TeleportRight");
-        }
-        else {
-            collision.gameObject.SendMessage("TeleportLeft");
+        if (collision.gameObject.tag != "IgnoreBounds") {
+            if (screenLocation == boundLocation.left) {
+                collision.gameObject.SendMessage("TeleportRight");
+            }
+            else {
+                collision.gameObject.SendMessage("TeleportLeft");
+            }
         }
     }
 }
