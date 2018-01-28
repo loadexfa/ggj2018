@@ -169,6 +169,7 @@ MonoBehaviour:
   virusEyeClosedSprite: {fileID: 21300000, guid: 1dd6806155a53403db0ec6fbc2251ff6,
     type: 3}
   speed: 0
+  squashSound: {fileID: 8300000, guid: 195197d3f11d2cd408f6df5759f4cc4b, type: 3}
 --- !u!212 &212460927987120004
 SpriteRenderer:
   m_ObjectHideFlags: 1
