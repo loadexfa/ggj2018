@@ -90,10 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fe1365b70574e718c516f53556fd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportLeftDestination: {fileID: 4704662720773280, guid: dfc5ed3968553456888d3eac292ec995,
-    type: 2}
-  teleportRightDestination: {fileID: 4268633128213758, guid: f9756add4c0ac440e84d1ffaff8f57ea,
-    type: 2}
+  teleportLeftDestination: {fileID: 0}
+  teleportRightDestination: {fileID: 0}
 --- !u!114 &114083443318813306
 MonoBehaviour:
   m_ObjectHideFlags: 1
