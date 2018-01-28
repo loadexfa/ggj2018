@@ -73,7 +73,9 @@ public class CellBehaviour : MonoBehaviour {
 		
 
 	void ChangeToVirus() {
-		source.PlayOneShot(squashSound, 0.5f);
+		if (this.gameObject.tag != "virus") {
+			source.PlayOneShot (squashSound, 0.5f);
+		}
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
 			transform.localScale += new Vector3 (-0.01F, -0.01F, 0);
