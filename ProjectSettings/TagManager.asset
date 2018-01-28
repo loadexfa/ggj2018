@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - virus
+  - red blood cell
+  - white blood cell
+  - IgnoreBounds
   layers:
   - Default
   - TransparentFX
