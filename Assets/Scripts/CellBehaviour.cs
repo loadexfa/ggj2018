@@ -88,8 +88,8 @@ public class CellBehaviour : MonoBehaviour {
 		m_SpriteRenderer.sprite = virusSprite;
 		this.GetComponent<CellMovement>().enabled = true;
 
-		float blinkStartTime = Random.Range(0, 1f);
-		float blinkRepeatTime = Random.Range(1, 1.5f);
+		float blinkStartTime = Random.Range(0f, 1f);
+		float blinkRepeatTime = Random.Range(3f, 10f);
 		InvokeRepeating("VirusBlink", blinkStartTime, blinkRepeatTime);
 	}
 
