@@ -30,7 +30,7 @@ public class StartButtonScript : MonoBehaviour {
 	}
 
 	void animate(){
-		Debug.Log ("z is " +transform.rotation.z);
+		//Debug.Log ("z is " +transform.rotation.z);
 		if (clockwise) {
 			if (transform.rotation.z > 0.3) {
 				
