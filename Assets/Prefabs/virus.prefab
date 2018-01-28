@@ -106,9 +106,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   redBloodCellSprite: {fileID: 21300000, guid: e178902bbe302441da8bb02635b978cf, type: 3}
-  whiteBloodCellSprite: {fileID: 21300000, guid: 8da3df02f01f048108360bd5b96dde0c,
+  whiteBloodCellSprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
     type: 3}
-  virusSprite: {fileID: 21300000, guid: d1575cbc1fb0b4fcea0401f34d897da1, type: 3}
+  whiteBloodCellMouthOpenSprite: {fileID: 21300000, guid: 25b9681a0ef4f42c489106b61d7a304d,
+    type: 3}
+  virusSprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
+  virusEyeClosedSprite: {fileID: 21300000, guid: 1dd6806155a53403db0ec6fbc2251ff6,
+    type: 3}
   speed: 0
 --- !u!212 &212900556540545136
 SpriteRenderer:
