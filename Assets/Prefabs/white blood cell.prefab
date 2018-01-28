@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 58670409968430606}
   - component: {fileID: 114675942357661742}
   - component: {fileID: 114524941398191238}
+  - component: {fileID: 114386129128640672}
+  - component: {fileID: 114346924161241734}
   m_Layer: 0
   m_Name: white blood cell
   m_TagString: white blood cell
@@ -125,6 +127,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5.9999995
+--- !u!114 &114346924161241734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762404887841288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4553c981d6a914e469c2aa3dad6a9abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDirection: 0
+--- !u!114 &114386129128640672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1762404887841288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8341c27189a0fb54ba21e98ac1267f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDirection: 0
 --- !u!114 &114524941398191238
 MonoBehaviour:
   m_ObjectHideFlags: 1
