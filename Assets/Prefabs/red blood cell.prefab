@@ -95,7 +95,11 @@ MonoBehaviour:
   redBloodCellSprite: {fileID: 21300000, guid: befca8bd6b81a47fc9f034b4786e3b7a, type: 3}
   whiteBloodCellSprite: {fileID: 21300000, guid: 86680274eb51344a892c15f2ddc26125,
     type: 3}
+  whiteBloodCellMouthOpenSprite: {fileID: 21300000, guid: 25b9681a0ef4f42c489106b61d7a304d,
+    type: 3}
   virusSprite: {fileID: 21300000, guid: 7d92b2952558e4471be0ebc371ac5253, type: 3}
+  virusEyeClosedSprite: {fileID: 21300000, guid: 1dd6806155a53403db0ec6fbc2251ff6,
+    type: 3}
   speed: 0
 --- !u!114 &114678161292782222
 MonoBehaviour:
