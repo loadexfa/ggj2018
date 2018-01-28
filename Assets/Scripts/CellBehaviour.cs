@@ -46,6 +46,8 @@ public class CellBehaviour : MonoBehaviour {
 				} else {
 					Destroy (coll.gameObject);
 					hp -= 1;
+					// Scale down white blood cell
+					transform.localScale += new Vector3 (-0.01F, -0.01F, 0);
 				}
 			}
 		}
@@ -75,7 +77,7 @@ public class CellBehaviour : MonoBehaviour {
     void ChangeToVirus() {
 		if (this.tag == "white blood cell") {
 			// Scale down virus from white blood cell
-			transform.localScale += new Vector3 (-0.05F, -0.05F, 0);
+			transform.localScale += new Vector3 (-0.01F, -0.01F, 0);
             scoreKeeper.SendMessage("IncrementScoreBig"); // tired... this feels like a cheap solution....
 		} else if (this.tag == "red blood cell") {
 			// Scale up virus from red blood cell
