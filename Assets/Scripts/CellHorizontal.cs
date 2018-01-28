@@ -13,14 +13,28 @@ public class CellHorizontal : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_rigidBody = this.GetComponent<Rigidbody2D>();
+        InvokeRepeating("ChangeDirection", 0, 1f);
+
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    void ChangeDirection()
+    {
+        if (currentDirection == direction.left)
+            currentDirection = direction.right;
+
+        else if (currentDirection == direction.right)
+            currentDirection = direction.left;
+    }
+    // Update is called once per frame
+    void Update ()
     {
         if (currentDirection == direction.right)
         {
-            m_rigidBody.AddForce(Vector3.right * .15f);
+            m_rigidBody.AddForce(Vector3.right * .3f);
+        }
+        else 
+        {
+            m_rigidBody.AddForce(Vector3.left * .25f);
         }
 		
 	}
