@@ -42,13 +42,13 @@ public class Spawner : MonoBehaviour {
         GameObject virus = GameObject.FindWithTag("virus");
 
         if (red == null && white == null) {
-            Debug.Log("you win!");
+            //Debug.Log("you win!");
 			endGame ();
             return true;
         }
 
         if (virus == null) {
-			Debug.Log("You lose!");
+			//Debug.Log("You lose!");
 			endGame ();
             return true;
         }
