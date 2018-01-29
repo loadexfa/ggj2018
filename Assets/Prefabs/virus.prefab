@@ -89,7 +89,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2deab044ea74abb4e9e48e7e4b615ee1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 09598b15707614c36b0a4ace9919f909, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.274
   m_Pitch: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   virusEyeClosedSprite: {fileID: 21300000, guid: 1dd6806155a53403db0ec6fbc2251ff6,
     type: 3}
   speed: 0
-  squashSound: {fileID: 8300000, guid: 2deab044ea74abb4e9e48e7e4b615ee1, type: 3}
+  squashSound: {fileID: 8300000, guid: 09598b15707614c36b0a4ace9919f909, type: 3}
 --- !u!212 &212900556540545136
 SpriteRenderer:
   m_ObjectHideFlags: 1
