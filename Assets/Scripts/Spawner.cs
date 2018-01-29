@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating(("SpawnWhiteCell"), 4, 10);
+        InvokeRepeating(("SpawnWhiteCell"), 4, 5);
         InvokeRepeating(("SpawnRedCell"), 4, 1.5f);
 	}
 	
